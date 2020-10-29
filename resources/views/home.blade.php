@@ -49,7 +49,6 @@
         </div>
     </nav>
 
-
     <section class="bg-white md:px-6 pb-8">
         <div class="container mx-auto pt-4">
             <div class="text-center">
