@@ -100,6 +100,9 @@
             </div>
         </div>
     </footer>
+
+    <!-- Fathom - beautiful, simple website analytics -->
+    <script src="https://cdn.usefathom.com/script.js" data-site="SCSOQNZQ" defer></script>
 </body>
 
 </html>
