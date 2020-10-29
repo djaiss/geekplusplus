@@ -6,12 +6,12 @@
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width" />
     <meta charSet="utf-8" />
-    <meta name="twitter:site" content="@tailwindcss" />
-    <meta name="twitter:description" content="A utility-first CSS framework for rapidly building custom user interfaces." />
-    <meta name="twitter:creator" content="@tailwindcss" />
-    <meta property="og:url" content="https://tailwindcss.com/" />
+    <meta name="twitter:site" content="@GPP_comics" />
+    <meta name="twitter:description" content="A comic about the geek culture, work, love and life." />
+    <meta name="twitter:creator" content="@GPP_comics" />
+    <meta property="og:url" content="https://geekplusplus.ca/" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="A utility-first CSS framework for rapidly building custom user interfaces." />
+    <meta property="og:description" content="A comic about the geek culture, work, love and life." />
     <meta property="og:image" content="https://tailwindcss.com/_next/static/media/twitter-large-card.2e0e43628f69eba639f387da72c3e323.png" />
 
     <title>GeekPlusPlus</title>
@@ -29,17 +29,22 @@
 
             <div class="md:flex md:items-center md:w-auto w-full order-2 md:order-2" id="menu">
                 <nav>
-                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                        <li><a class="inline-block no-underline hover:text-black hover:underline md:py-2 md:px-4" href="#">Twitter</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline md:py-2 md:px-4" href="#">Instagram</a></li>
+                    <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0 sm:hidden">
+                        <li class="">
+                            <img src="/img/twitter.png" class="inline">
+                            <a class="inline-block no-underline hover:text-black hover:underline md:py-2" href="https://twitter.com/GPP_comics">Twitter</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
 
-            <div class="order-1 md:order-1">
-                <a class="tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="/">GeekPlusPlus <span class="pl-5 text-gray-400">G++</span></a>
+            <div class="order-1 md:order-1 relative">
+                <img src="/img/logo.png" class="absolute w-12">
 
-                <p class="text-sm">A comic about the geek culture, work, love and life.</p>
+                <div class="pl-20 mt-3">
+                    <a class="tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="/">GeekPlusPlus <span class="pl-5 text-gray-400">G++</span></a>
+                    <p class="text-sm">A comic about the geek culture, work, love and life.</p>
+                </div>
             </div>
         </div>
     </nav>
@@ -52,8 +57,8 @@
                 <a href="{{ $url }}" class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-gray-200 text-green-900">#{{ $comic->id }}</a>
             </p>
 
-            <div class="w-full p-6 flex flex-col">
-                <img src="/img/{{ $comic->filename }}" alt="">
+            <div class="w-full p-6 text-center">
+                <img src="/img/{{ $comic->filename }}" style="margin: 0 auto;">
             </div>
 
             <nav class="w-full z-30 top-0 px-6 py-1">
