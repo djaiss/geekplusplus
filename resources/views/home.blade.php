@@ -52,8 +52,8 @@
                 <a href="{{ $url }}" class="ml-3 inline-flex items-center px-3 py-1 rounded-full text-sm font-medium leading-4 bg-gray-200 text-green-900">#{{ $comic->id }}</a>
             </p>
 
-            <div class="w-full p-6 flex flex-col">
-                <img src="/img/{{ $comic->filename }}" alt="">
+            <div class="w-full p-6 text-center">
+                <img src="/img/{{ $comic->filename }}" style="margin: 0 auto;">
             </div>
 
             <nav class="w-full z-30 top-0 px-6 py-1">
