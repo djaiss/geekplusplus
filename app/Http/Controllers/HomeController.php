@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ComicHelper;
 use App\Http\Controllers\Controller;
 use App\Models\Comic;
 use App\Models\Post;
@@ -18,7 +19,9 @@ class HomeController extends Controller
 
         return view('home')
             ->with('comic', $comic)
-            ->with('url', config('geekplusplus.url').'/'.$comic->id);
+            ->with('url', config('geekplusplus.url').'/'.$comic->id)
+            ->with('url_next', config('geekplusplus.url').'/'.ComicHelper::next($comic))
+            ->with('url_previous', config('geekplusplus.url').'/'.ComicHelper::previous($comic));
     }
 
     public function show(Request $request, int $comicId)
@@ -31,7 +34,9 @@ class HomeController extends Controller
 
         return view('home')
             ->with('comic', $comic)
-            ->with('url', config('geekplusplus.url').'/'.$comic->id);
+            ->with('url', config('geekplusplus.url').'/'.$comic->id)
+            ->with('url_next', config('geekplusplus.url').'/'.ComicHelper::next($comic))
+            ->with('url_previous', config('geekplusplus.url').'/'.ComicHelper::previous($comic));
     }
 
     public function random()
