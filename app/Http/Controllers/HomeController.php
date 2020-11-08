@@ -9,6 +9,7 @@ use App\Models\Post;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
@@ -31,6 +32,8 @@ class HomeController extends Controller
         } catch (ModelNotFoundException $e) {
             return redirect('/');
         }
+
+        Comic::find($comic->id)->increment('views');
 
         return view('home')
             ->with('comic', $comic)
